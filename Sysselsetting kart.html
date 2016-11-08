@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+  <title>Samleside for våre nettsider</title>
+    <meta charset="utf-8">
+    <link "type=text/css" rel="stylesheet" href="Sysselsetting kart.css">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+    <!--Laster ned font-family crimson mens siden laster inn. så man kan bruke denne.-->
+
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.css' rel='stylesheet' />
+
+
+
+  </head>
+  <body>
+
+    <div id='map'></div>
+    <div class='map-overlay' id='features'><h2>US population density</h2><div id='pd'><p>Hover over a state!</p></div></div>
+    <div class='map-overlay' id='legend'></div>
+    <script>
+
+    // define access token
+    mapboxgl.accessToken = 'pk.eyJ1IjoidmViam9ybm05NCIsImEiOiJjaXYzb2ZjYzgwMDBnMnp1ajAzNTVuZjFmIn0.v0lp2h0jNviE6SC3S2ClGw';
+
+    //create map
+    var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/vebjornm94/civ9edxzx00002ip2eoei9ftm' // map style URL from Mapbox Studio
+    });
+
+    // wait for map to load before adjusting it
+    map.on('load', function() {
+
+        // define layer names
+        var layers = ['S_1.4-1.9', 'S_2-2.5', 'S_2.6-2.9', 'S_3-3.4', 'S_3.5-4']
+
+        // create legend
+        layers.forEach(function(layer) {;
+            var color = map.getPaintProperty(layer, 'fill-color');
+            var item = document.createElement('div');
+            var key = document.createElement('span');
+            key.className = 'legend-key';
+            key.style.backgroundColor = color;
+
+            var value = document.createElement('span');
+            value.innerHTML = layer;
+            item.appendChild(key);
+            item.appendChild(value);
+            legend.appendChild(item);
+        });
+    });
+
+    </script>
+  </body>
+</html>

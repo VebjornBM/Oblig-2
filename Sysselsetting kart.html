@@ -19,8 +19,9 @@
 
 
     <div id='map'></div>
-    <div class='map-overlay' id='features'><h2>US population density</h2><div id='pd'><p>Hover over a state!</p></div></div>
+    <div class='map-overlay' id='features'><h2>Endring i gjennomsnittsalder i Opplands kommuner</h2><div id='pd'><p>Hey alle saman</p></div></div>
     <div class='map-overlay' id='legend'></div>
+    <div class='map-overlay' id='info_box'><p>TEST</p></div>
     <script>
 
     // define access token
@@ -53,6 +54,19 @@
             legend.appendChild(item);
         });
     });
+
+    map.on('mousemove', function(e) {
+      var sysselsatt = map.queryRenderedFeatures(e.point, {
+        layers: sysselsatt
+      });
+
+      if (sysselsatt.length > 0) {
+        document.getElementById('info_box').innerHTML = '<h3><strong>' + sysselsatt[0].properties.Kommune + '</strong></h3><p><strong><em>' + sysselsatt[0].properties.Endring_pr + '</Endring</em></p>';
+      } else {
+        document.getElementById('info_box').innerHTML = '<p>Hover over kom state!</p>';
+      }
+    });
+    map.getCanvas().style.cursor = 'default';
 
     </script>
   </body>

@@ -41,15 +41,17 @@ p {
 
 #features {
   top: 0;
-  height: 100px;
+  height: 130px;
   margin-top: 20px;
-  width: 250px;
+  width: 400px;
 }
 
 #info_box {
+  margin-right: 75%;
   height: 120px;
   width: 250px;
   padding: 10px;
+
 }
 
 #legend {

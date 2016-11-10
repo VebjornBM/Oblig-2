@@ -21,7 +21,8 @@ p {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 100%;
+  width: 99%;
+  height: 99%;
 }
 
 /**
@@ -47,12 +48,13 @@ p {
 }
 
 #info_box {
-  margin-right: 75%;
-  height: 120px;
-  width: 250px;
+  margin-right: 85%;
+  margin-bottom: 5%
+  height: 180px;
+  width: 150px;
   padding: 10px;
-
 }
+
 
 #legend {
   padding: 10px;

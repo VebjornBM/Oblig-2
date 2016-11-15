@@ -18,6 +18,7 @@
 
 
 
+
     <div id='map'></div>
     <div class='map-overlay' id='features'><h2>Endring i gjennomsnittsalder i Opplands kommuner</h2><div id='pd'><p>Dette kartet viser endringen i antall år på gjennomsnittsalderen til sysselsatte i Oppland fylke fordelt på kommune.</p></div></div>
     <div class='map-overlay' id='legend'></div>
@@ -72,16 +73,38 @@
         layers: sysselsatt
       });
 
-      if (sysselsatt[0].properties.K_ID < 600) {
+      if (sysselsatt[0].properties.K_ID < 546 && sysselsatt[0].properties.K_ID > 500) {
         document.getElementById('info_box').style.height = '33%';
         document.getElementById('info_box').innerHTML = '<h3><strong>' + sysselsatt[0].properties.Kommune + '</strong></h3><h4>Endring: ' + sysselsatt[0].properties.Endring_pr + '</h4><h4>2000:    ' + sysselsatt[0].properties.F2 + '</h4><h4>2015: '+ sysselsatt[0].properties.F17 + '</h4>';
       } else {
         document.getElementById('info_box').style.height = '14%';
         document.getElementById('info_box').innerHTML = '<h2><strong><em>Pek over en kommune for å se statistikk</h2></strong></em>';
       }
+
+
     });
     map.getCanvas().style.cursor = 'default';
 
     </script>
+
+    *                    .--.
+                        / /  `
+ +                     | |
+        '               \ \__,
+    *               +    '--'  *
+        +        /\
++              .'  '.   *
+  *           /======\      +
+             ;:.  _   ;
+             |:. (_)  |
+             |:.  _   |
++            |:. (_)  |          *
+             ;:.      ;
+           .' \:.    / `.
+          / .-'':._.'`-. \
+          |/    /||\    \|
+        _..--"""````"""--.._
+  _.-'``                    ``'-._
+-'         Hello, explorer        '-
   </body>
 </html>

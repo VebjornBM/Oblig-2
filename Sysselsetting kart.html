@@ -27,10 +27,20 @@
     // define access token
     mapboxgl.accessToken = 'pk.eyJ1IjoidmViam9ybm05NCIsImEiOiJjaXYzb2ZjYzgwMDBnMnp1ajAzNTVuZjFmIn0.v0lp2h0jNviE6SC3S2ClGw';
 
+
+    var bounds = [
+    [0.14257812453153,	58.98480811122234], // Southwest coordinates
+    [18.8535162521554,	63.70472212442145]  // Northeast coordinates
+];
+
+
     //create map
     var map = new mapboxgl.Map({
         container: 'map', // container id
-        style: 'mapbox://styles/vebjornm94/civjeam1400ef2kl80el5zkdm' // map style URL from Mapbox Studio
+        style: 'mapbox://styles/vebjornm94/civjeam1400ef2kl80el5zkdm', // map style URL from Mapbox Studio
+        center: [10.547119,	61.227957], // Definer midtpunktet på kartet når det lastes
+        zoom: 6, // Definerer start zoom-nivå når 
+        maxBounds: bounds
     });
 
     // wait for map to load before adjusting it

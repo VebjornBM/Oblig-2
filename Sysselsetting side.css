@@ -104,3 +104,9 @@ a:visited {
 .hover a:hover{
   color:red;
 }
+object{
+  margin-left:5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}

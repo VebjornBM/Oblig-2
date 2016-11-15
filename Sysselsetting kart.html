@@ -24,23 +24,23 @@
     <div class='map-overlay' id='info_box'><h2><strong><em>Pek over en kommune for å se statistikk</h2></strong></em></div>
     <script>
 
-    // define access token
+    // definer "access token" fra mapbox
     mapboxgl.accessToken = 'pk.eyJ1IjoidmViam9ybm05NCIsImEiOiJjaXYzb2ZjYzgwMDBnMnp1ajAzNTVuZjFmIn0.v0lp2h0jNviE6SC3S2ClGw';
 
-
+    // Lager en variabel som senere brukes til maxBounds
     var bounds = [
-    [0.14257812453153,	58.98480811122234], // Southwest coordinates
-    [18.8535162521554,	63.70472212442145]  // Northeast coordinates
+    [0.14257812453153,	58.98480811122234], // Sør-vest koordinater
+    [18.8535162521554,	63.70472212442145]  // Nord-øst koordinater
 ];
 
 
-    //create map
+    // lager kartet med de ulike parameterne som er definert
     var map = new mapboxgl.Map({
         container: 'map', // container id
         style: 'mapbox://styles/vebjornm94/civjeam1400ef2kl80el5zkdm', // map style URL from Mapbox Studio
         center: [10.547119,	61.227957], // Definer midtpunktet på kartet når det lastes
-        minZoom: 5,
-        maxZoom: 8,
+        minZoom: 5, // Definerer min zoom i kartet
+        maxZoom: 8, // Definerer max zoom i kartet
         zoom: 6, // Definerer start zoom-nivå når
         maxBounds: bounds
     });
@@ -72,7 +72,7 @@
         layers: sysselsatt
       });
 
-      if (sysselsatt[0].properties.K_ID > 400) {
+      if (sysselsatt[0].properties.K_ID < 600) {
         document.getElementById('info_box').style.height = '33%';
         document.getElementById('info_box').innerHTML = '<h3><strong>' + sysselsatt[0].properties.Kommune + '</strong></h3><h4>Endring: ' + sysselsatt[0].properties.Endring_pr + '</h4><h4>2000:    ' + sysselsatt[0].properties.F2 + '</h4><h4>2015: '+ sysselsatt[0].properties.F17 + '</h4>';
       } else {

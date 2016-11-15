@@ -39,7 +39,9 @@
         container: 'map', // container id
         style: 'mapbox://styles/vebjornm94/civjeam1400ef2kl80el5zkdm', // map style URL from Mapbox Studio
         center: [10.547119,	61.227957], // Definer midtpunktet på kartet når det lastes
-        zoom: 6, // Definerer start zoom-nivå når 
+        minZoom: 5,
+        maxZoom: 10,
+        zoom: 6, // Definerer start zoom-nivå når
         maxBounds: bounds
     });
 

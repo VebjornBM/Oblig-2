@@ -94,7 +94,7 @@ object{
 }
 /* Plasserer en text box ved siden av kartet som lastes inn*/
 #text_div  {
-  word-wrap: break-word;
+  word-wrap: break-word; /*automatisk tectbryting av ord som er for lange for boxen*/
   border-style: solid;
   width: 30%;
   height: 5%;
@@ -103,8 +103,8 @@ object{
   margin-bottom: 2%;
   margin-left: 1%;
 }
-#sentrering{
-  margin:2%;
+#sentrering{/*for å få text boksen ved siden av kartet(midt på)*/
+    margin:2%;
 }
 h1{
   text-align: center;

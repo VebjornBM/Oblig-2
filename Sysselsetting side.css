@@ -13,7 +13,8 @@ body {
   text-align: center;
 }
 
-/*alt til og med id activ er en del av navigasjonsbaren*/
+/*alt til og med id active er en del av navigasjonsbaren*/
+/*Dette gir bakgrunnsfarge til knappene*/
 ul {
     list-style-type: none;
     margin: 2px;
@@ -26,13 +27,13 @@ ul {
 
 
 }
-
+/*Legger linkene opp mot hverandre/side ved side*/
 li {
     display: inline;
     float:left;
 
 }
-
+/*Styler knappene til linkene med farge og ramme. Gir også knappene litt rom fra hverandre*/
 li a {
   display: block;
     padding: 8px;
@@ -53,12 +54,13 @@ li a {
     font-weight: bold;
 
 }
+/* Anngir paramater for en animasajon*/
 @keyframes hover1 {
     from {text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
     color:black;}
     to {color: rgba(150, 0, 0, 0.7);text-shadow: 1px 1px rgba(150, 0, 0, 0.5)}
 }
-
+/*Gjør at knappen som pekeren peker på går fra standardfargen til en rødfarge, hjulpet av koden over */
 li a:hover {
   color: rgba(150, 0, 0, 0.7);
   text-shadow: 1px 1px rgba(130, 0, 0, 0.5);
@@ -67,43 +69,22 @@ li a:hover {
 
 }
 
+/* Flytter "samleside" knappen til høyre og gir litt rom fra høyre kant*/
 #link1 {
   float:right;
   margin-right:8px;
 }
+/* Gir siden/knappen som er aktiv rød bakgrunnsfarge*/
 #active{
   background: red;
 }
+
 p{
   text-align: center;
   margin:15px;
   line-height: 27px;
 }
-#oppgave1{
-  width: 60%;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top: 35px;
-  margin-bottom: 15px
-}
-#oppgave2{
-  width: 60%;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top: 20px;
-  margin-bottom: 15px
-}
-
-a:link {
-    text-decoration: none;
-    color: black;
-}
-a:visited {
-  color:black;
-}
-.hover a:hover{
-  color:red;
-}
+/*Plassering av kartet på nettsiden*/
 object{
   margin-left:5%;
   margin-right: 5%;

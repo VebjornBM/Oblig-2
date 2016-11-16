@@ -95,9 +95,10 @@ object{
 /* Plasserer en text box ved siden av kartet som lastes inn*/
 #text_div  {
   border-style: solid;
-  width: 28%;
+  width: 30%;
   height: 5%;
   float:left;
   margin-top: 2%;
   margin-bottom: 2%;
+  margin-left: 1%;
 }

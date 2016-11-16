@@ -94,14 +94,18 @@ object{
 }
 /* Plasserer en text box ved siden av kartet som lastes inn*/
 #text_div  {
+  word-wrap: break-word;
   border-style: solid;
   width: 30%;
   height: 5%;
   float:left;
-  margin-top: 15%;
+  margin-top: 10%;
   margin-bottom: 2%;
   margin-left: 1%;
 }
 #sentrering{
   margin:2%;
+}
+h1{
+  text-align: center;
 }
